@@ -39,7 +39,6 @@ root model =
         [ ( "test"
           , div []
                 [ h4 [] [ text "Multi-select" ]
-                , paperItem [] [ text "Bold" ]
                 , div [ class "horizontal-section" ]
                     [ paperListBox [ attribute "multi" "" ]
                         [ paperItem [] [ text "Bold" ]
