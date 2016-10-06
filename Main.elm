@@ -34,21 +34,22 @@ update action model =
 
 root : Model -> Html Msg
 root model =
-    Html.Keyed.node "div"
+    div
         [ class "horizontal-section-container" ]
-        [ ( "test"
-          , div []
-                [ h4 [] [ text "Multi-select" ]
-                , div [ class "horizontal-section" ]
-                    [ paperListBox [ attribute "multi" "" ]
+        [ div []
+            [ h4 [] [ text "Multi-select" ]
+            , Html.Keyed.node "div"
+                [ class "horizontal-section" ]
+                [ ( "listbox"
+                  , paperListBox [ attribute "multi" "" ]
                         [ paperItem [] [ text "Bold" ]
                         , paperItem [] [ text "Italic" ]
                         , paperItem [] [ text "Underline" ]
                         , paperItem [] [ text "Strikethrough" ]
                         ]
-                    ]
+                  )
                 ]
-          )
+            ]
         ]
 
 
